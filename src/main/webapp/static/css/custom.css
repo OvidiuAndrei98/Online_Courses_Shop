@@ -1,63 +1,60 @@
 .glyphicon {
-    margin-right:5px;
+    margin-right: 5px;
 }
-.thumbnail
-{
+
+.thumbnail {
     margin-bottom: 20px;
     padding: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
 }
-.thumbnail img
-{
+
+.thumbnail img {
     margin-top: 10px;
 }
-.item.list-group-item
-{
+
+.item.list-group-item {
     float: none;
     width: 100%;
     background-color: #fff;
     margin-bottom: 10px;
 }
-.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
-{
+
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover {
     background: #428bca;
 }
 
-.item.list-group-item .list-group-image
-{
+.item.list-group-item .list-group-image {
     margin-right: 10px;
 }
-.item.list-group-item .thumbnail
-{
+
+.item.list-group-item .thumbnail {
     margin-bottom: 0px;
 }
-.item.list-group-item .caption
-{
+
+.item.list-group-item .caption {
     padding: 9px 9px 0px 9px;
 }
-.item.list-group-item:nth-of-type(odd)
-{
+
+.item.list-group-item:nth-of-type(odd) {
     background: #eeeeee;
 }
 
-.item.list-group-item:before, .item.list-group-item:after
-{
+.item.list-group-item:before, .item.list-group-item:after {
     display: table;
     content: " ";
 }
 
-.item.list-group-item img
-{
+.item.list-group-item img {
     float: left;
 }
-.item.list-group-item:after
-{
+
+.item.list-group-item:after {
     clear: both;
 }
-.list-group-item-text
-{
+
+.list-group-item-text {
     margin: 0 0 11px;
 }
 
@@ -82,7 +79,6 @@
     /*left: 24%;*/
     width: 100%;
     height: 30rem;
-
 }
 
 .carousel-caption {
@@ -100,6 +96,7 @@
     text-transform: uppercase;
     text-shadow: 1px 1px 2px black;
 }
+
 .carousel-caption h3 {
     font-weight: 500;
     font-size: 200%;
@@ -122,9 +119,7 @@
     margin: 2rem auto;
     border-top: 2px solid #b4b4b4;
     width: 80%;
-
 }
-
 
 .cart::before {
     text-align: center;
@@ -135,7 +130,6 @@
     width: 16px;
     height: 16px;
     transform: translateX(-5px);
-
 }
 
 .itemCount {
@@ -147,25 +141,35 @@
 }
 
 .modal {
-    display: block; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 3; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 3;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0,0,0);
+    /* Fallback color */
+    background-color: rgba(0,0,0,0.4);
+    /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 10% auto; /* 15% from the top and centered */
+    margin: 10% auto;
+    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
+    /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -176,16 +180,12 @@
     font-weight: bold;
 }
 
-
 /*--------------------------------------CART MODAL-----------------------*/
-
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
-
 
 .plus-minus {
     position: relative
@@ -194,7 +194,7 @@
 .plus {
     position: absolute;
     top: -4px;
-    left: 2px;
+    left: 10px;
     cursor: pointer
 }
 
@@ -209,10 +209,9 @@
     color: #FF5252
 }
 
-.book,
-.book-img {
+.book, .book-img {
     width: 100px;
-    height: 160px;
+    height: 100px;
     border-radius: 5px
 }
 
@@ -228,14 +227,13 @@
 
 .card-modal {
     margin: 40px 0px;
-    padding: 40px 50px;
+    padding: 40px 20px;
     border-radius: 20px;
     border: none;
     box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.2)
 }
 
-input,
-textarea {
+input, textarea {
     background-color: #F3E5F5;
     padding: 8px 15px 8px 15px;
     width: 100%;
@@ -247,8 +245,7 @@ textarea {
     font-weight: 300
 }
 
-input:focus,
-textarea:focus {
+input:focus, textarea:focus {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
@@ -315,10 +312,10 @@ button:focus {
     float: right
 }
 
-@media screen and (max-width: 768px) {
 
-    .book,
-    .book-img {
+
+@media screen and (max-width: 768px) {
+    .book, .book-img {
         width: 100px;
         height: 150px
     }
@@ -337,4 +334,33 @@ button:focus {
     }
 }
 
+.goHomePage {
+    border: none;
+    border-radius: 10px;
+    background-color: #673AB7;
+    color: #fff;
+    padding: 8px 15px;
+    margin: 20px auto;
+    cursor: pointer;
+    width: 200px;
+}
 
+.goHomePage a {
+    text-decoration: none;
+    color: white;
+}
+
+.card-invoice {
+    margin: 40px auto;
+    padding: 40px 50px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.2);
+    width: 60%;
+
+}
+
+.btn-outline-info {
+    background-color: #673AB7;
+    color: white;
+}

@@ -1,8 +1,10 @@
 package com.codecool.shop.controller;
 
+import com.codecool.shop.dao.CartDao;
 import com.codecool.shop.dao.ProductCategoryDao;
 import com.codecool.shop.dao.ProductDao;
 import com.codecool.shop.dao.SupplierDao;
+import com.codecool.shop.dao.implementation.CartDaoMem;
 import com.codecool.shop.dao.implementation.ProductCategoryDaoMem;
 import com.codecool.shop.dao.implementation.ProductDaoMem;
 import com.codecool.shop.dao.implementation.SupplierDaoMem;
@@ -32,20 +34,21 @@ public class ProductController extends HttpServlet {
         SupplierDao supplierDataStore = SupplierDaoMem.getInstance();
         ProductService productService = new ProductService(productDataStore,productCategoryDataStore, supplierDataStore);
 
+
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
 
         String category = req.getParameter("category");
-        String supplier = req.getParameter("supplier");
         int categoryId = (category != null) ? Integer.parseInt(category) : 1;
-        int supplierId = (supplier != null) ? Integer.parseInt(supplier) : 1;
+        String supplier = req.getParameter("supplier");
+        int supplierId = (supplier != null) ? Integer.parseInt(supplier) : 0;
 
-        if (supplier != null) {
-            context.setVariable("supplier", productService.getProductSupplier(supplierId));
-            context.setVariable("products", productService.getProductsForSupplier(supplierId));
-        } else {
+        if (supplier == null) {
             context.setVariable("category", productService.getProductCategory(categoryId));
             context.setVariable("products", productService.getProductsForCategory(categoryId));
+        } else {
+            context.setVariable("supplier", productService.getProductSupplier(supplierId));
+            context.setVariable("products", productService.getProductsForSupplier(supplierId));
         }
 
         context.setVariable("categories", productCategoryDataStore.getAll());

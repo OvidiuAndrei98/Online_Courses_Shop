@@ -7,8 +7,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Cart {
     private static final AtomicInteger count = new AtomicInteger(1);
     int id;
-    List<LineItem> products = new ArrayList<>();
-    int total;
+    private transient List<LineItem> products = new ArrayList<>();
+    float total;
     int quantity;
 
 
@@ -34,12 +34,15 @@ public class Cart {
         return products;
     }
 
-    public int getTotal() {
+    public float getTotal() {
         return total;
     }
 
-    public void setTotal(int total) {
-        this.total = total;
+    public void calculateTotal() {
+        total = 0;
+        products.forEach(product -> {
+            total += product.getQuantity() * product.getUnitPrice();
+        });
     }
 
     public int getQuantity() {
@@ -49,4 +52,9 @@ public class Cart {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public void increaseQuantity() {
+        quantity += 1;
+    }
+
 }

@@ -7,14 +7,14 @@ import java.util.Currency;
 
 public class LineItem implements Serializable {
 
-        private int orderId;
-        private int lineNumber;
-        private int quantity;
-        private int itemId;
-        private Currency currency;
-        private float unitPrice;
-        private Product product;
-        private float total;
+        private   int orderId;
+        private   int lineNumber;
+        private  int quantity;
+        private  int itemId;
+        private  Currency currency;
+        private  float unitPrice;
+        private  Product product;
+        private  float total;
 
         public LineItem() {
         }
@@ -27,7 +27,7 @@ public class LineItem implements Serializable {
             this.product = cartItem;
         }
 
-        public int getOrderId() {
+        public  int getOrderId() {
             return orderId;
         }
 
@@ -87,6 +87,10 @@ public class LineItem implements Serializable {
             } else {
                 total = Float.parseFloat(null);
             }
+        }
+
+        public Product getProduct() {
+            return product;
         }
 
     }
