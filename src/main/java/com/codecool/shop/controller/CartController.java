@@ -57,6 +57,8 @@ public class CartController extends HttpServlet {
         int id = (Integer) session.getAttribute("cardId");
         System.out.println(" old sesion:" + id);
         Cart cart = cartDaoDataStore.find(id);
+        System.out.println(cart);
+        System.out.println(cart.getProducts());
 
 
 
@@ -66,7 +68,7 @@ public class CartController extends HttpServlet {
 //        String modifier = (req.getParameter("modifier")) != null ? req.getParameter("modifier") : "default";
 
 
-        if (lineItemDaoDataStore.find(productDataStore.find(productId).getId()) == null) {
+        if (lineItemDaoDataStore.find(productDataStore.find(productId).getId()) == null || lineItemDaoDataStore.find(productDataStore.find(productId).getId()).getOrderId() != cart.getId()){
             lineItemDaoDataStore.add(new LineItem(productDataStore.find(productId).getId(), productDataStore.find(productId)));
 //            System.out.println(lineItemDaoDataStore.find(productDataStore.find(productId).getId()));
 //            System.out.println(lineItemDaoDataStore.find(productDataStore.find(productId).getId()).getLineNumber());

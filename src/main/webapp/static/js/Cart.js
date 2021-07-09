@@ -21,6 +21,7 @@ async function loadData(e) {
     console.log("YES")
     e.preventDefault();
      let API = "/cart?productId=" + e.target.dataset.id;
+     console.log(e.target)
     let request = await fetch(API);
     let response = await request.json();
     itemCount.innerHTML = response.quantity;
