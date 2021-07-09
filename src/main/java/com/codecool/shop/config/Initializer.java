@@ -38,8 +38,8 @@ public class Initializer implements ServletContextListener {
         productCategoryDataStore.add(sql);
 
         //Seting up new Cart
-        Cart cart = new Cart(1);
-        cartDaoDataStore.add(cart);
+//        Cart cart = new Cart();
+//        cartDaoDataStore.add(cart);
 
 
         //setting up products and printing it

@@ -5,21 +5,22 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Cart {
-    private static final AtomicInteger count = new AtomicInteger(1);
+    private static final AtomicInteger count = new AtomicInteger();
     int id;
     private transient List<LineItem> products = new ArrayList<>();
     float total;
     int quantity;
 
 
-    public Cart(int id) {
-        this.id = id;
+    public Cart() {
+        this.id = count.incrementAndGet();
 
     }
 
     public Cart(List<LineItem> products) {
-        this.id = 1; //count.incrementAndGet();
+        this.id = count.incrementAndGet();
         this.products = products;
+
     }
 
     public void addToCart(LineItem lineItem) {

@@ -35,7 +35,6 @@ public class CartController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         resp.setContentType("application/json");
         resp.setCharacterEncoding("UTF-8");
 
@@ -44,7 +43,24 @@ public class CartController extends HttpServlet {
         LineItemDao lineItemDaoDataStore = LineItemDaoMem.getInstance();
 
 
-        Cart cart = cartDaoDataStore.find(1);
+        HttpSession session = req.getSession(true);
+
+
+        if (session.isNew()) {
+            System.out.println("NEW");
+            Cart cart = new Cart();
+            cartDaoDataStore.add(cart);
+            session.setAttribute("cardId",cart.getId());
+            System.out.println((Integer) session.getAttribute("cardId"));
+        }
+
+        int id = (Integer) session.getAttribute("cardId");
+        System.out.println(" old sesion:" + id);
+        Cart cart = cartDaoDataStore.find(id);
+
+
+
+//        Cart cart = cartDaoDataStore.find(1);
 
         int productId = Integer.parseInt(req.getParameter("productId"));
 //        String modifier = (req.getParameter("modifier")) != null ? req.getParameter("modifier") : "default";
