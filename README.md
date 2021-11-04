@@ -11,6 +11,18 @@ Table of Contents
 2. Getting Started
    - [Installation](https://github.com/OvidiuAndrei98/Joblish_web_application/tree/master/backend#installation)
 
+
+[![image.png](https://i.postimg.cc/76hDm06V/image.png)](https://postimg.cc/zLs9fLTb)
+
+[![image.png](https://i.postimg.cc/SQXYKzrC/image.png)](https://postimg.cc/Lhp8C5G8)
+
+[![image.png](https://i.postimg.cc/8cVGD34y/image.png)](https://postimg.cc/JDKv5p9J)
+
+![image](https://user-images.githubusercontent.com/72840832/140388519-5f0c26e8-f987-44b1-ae19-dc8b405d5bc6.png)
+
+[![image.png](https://i.postimg.cc/85NwSmWR/image.png)](https://postimg.cc/yJp0h9Lx)
+
+
 ### Built With
 
 - Maven
