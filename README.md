@@ -10,8 +10,8 @@ Table of Contents
    - [Built With](https://github.com/OvidiuAndrei98/Joblish_web_application/tree/master/backend#built-with)
 2. Getting Started
    - [Installation](https://github.com/OvidiuAndrei98/Joblish_web_application/tree/master/backend#installation)
-3.
-   -[Live Demo](https://penicashop.herokuapp.com/)
+3. Live Demo
+   - [Open](https://penicashop.herokuapp.com/)
 
 
 [![image.png](https://i.postimg.cc/76hDm06V/image.png)](https://postimg.cc/zLs9fLTb)
